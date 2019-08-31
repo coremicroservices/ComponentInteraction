@@ -1,0 +1,19 @@
+<h2>Employee Detail -> Parrent Component</h2>
+
+<div *ngIf="employees">
+    <table>
+        <tr *ngFor="let employee of employees">
+            <td>
+                ID :{{employee.id}}
+            </td> 
+            <br>
+            <td>
+               Name :{{employee.EmpName}}
+            </td>     
+            <td>
+                <input type="submit" (click)="getDeptId(employee.DeptId)" value="Get Department">
+            </td>        
+         </tr> 
+    </table>
+    <app-department [deptId]="DeptId"></app-department>
+</div>
